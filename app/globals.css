@@ -1,4 +1,3 @@
-
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 /* ========================================
@@ -124,20 +123,20 @@ main.col-md-10 {
   color: #77768f;
   font-weight: 550;
   font-size: 13px;
-  transition: background 0.2s ease, color 0.2s ease,
-    transform 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .taskspace-nav-link:hover {
   background: #f8f6ff;
   color: var(--primary);
-  transform: translateX(2px);
+  transform: translateX(4px);
 }
 
 .taskspace-nav-link.active {
   background: var(--primary-light);
   color: var(--primary-dark);
   font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(114, 87, 232, 0.1);
 }
 
 .taskspace-sidebar hr {
@@ -197,7 +196,7 @@ main > .d-flex .small.taskspace-muted {
   border-radius: 10px;
   font-size: 13px;
   font-weight: 650;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary {
@@ -212,8 +211,8 @@ main > .d-flex .small.taskspace-muted {
   background: var(--primary-dark);
   border-color: var(--primary-dark);
   color: #fff;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 15px rgba(114, 87, 232, 0.22);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(114, 87, 232, 0.28);
 }
 
 .btn-outline-secondary {
@@ -226,19 +225,25 @@ main > .d-flex .small.taskspace-muted {
   background: var(--primary-light);
   border-color: #d9d0ff;
   color: var(--primary-dark);
+  transform: translateY(-1px);
 }
 
 .btn-outline-danger {
   border-radius: 8px;
 }
 
+.btn-outline-danger:hover {
+  transform: translateY(-1px);
+}
+
 .btn-close {
   opacity: 0.35;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-close:hover {
   opacity: 0.9;
+  transform: scale(1.1);
 }
 
 /* ========================================
@@ -250,12 +255,13 @@ main > .d-flex .small.taskspace-muted {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .taskspace-card:hover {
   border-color: #ded8ff;
-  box-shadow: 0 8px 26px rgba(35, 28, 83, 0.065);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(35, 28, 83, 0.08);
 }
 
 .taskspace-stat-number {
@@ -303,6 +309,7 @@ main > .d-flex .small.taskspace-muted {
   color: var(--text);
   font-size: 13px;
   box-shadow: none;
+  transition: all 0.2s ease;
 }
 
 .form-control::placeholder {
@@ -312,7 +319,8 @@ main > .d-flex .small.taskspace-muted {
 .form-control:focus,
 .form-select:focus {
   border-color: #9b8af3;
-  box-shadow: 0 0 0 3px rgba(114, 87, 232, 0.11);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(114, 87, 232, 0.12);
 }
 
 input[type="date"] {
@@ -410,14 +418,13 @@ section#add-task h5 {
   border-radius: 13px;
   box-shadow: 0 3px 8px rgba(38, 33, 83, 0.035);
   overflow-wrap: anywhere;
-  transition: transform 0.2s ease, box-shadow 0.2s ease,
-    border-color 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .kanban-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   border-color: #d7ceff;
-  box-shadow: 0 9px 22px rgba(38, 33, 83, 0.075);
+  box-shadow: 0 10px 24px rgba(38, 33, 83, 0.09);
 }
 
 .kanban-card .kanban-priority {
@@ -517,6 +524,7 @@ section#add-task h5 {
   background: #fff;
   border-color: #a99bf3;
   color: var(--primary-dark);
+  transform: translateY(-1px);
 }
 
 /* ========================================
@@ -547,6 +555,7 @@ section#add-task h5 {
   color: #5c5b72;
   font-size: 12px;
   vertical-align: middle;
+  transition: background 0.15s ease;
 }
 
 .taskspace-table tbody tr:last-child td {
@@ -554,7 +563,7 @@ section#add-task h5 {
 }
 
 .taskspace-table tbody tr:hover td {
-  background: #fcfbff;
+  background: #f8f6ff;
 }
 
 .taskspace-table tbody td.fw-semibold {

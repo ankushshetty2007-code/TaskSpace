@@ -178,6 +178,9 @@ npm run build
 
 ## Contributed
 -Ankush Shetty
+-Dayanand k Mane
+
+
 
 ## Conclusion
 
